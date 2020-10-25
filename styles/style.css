@@ -91,6 +91,28 @@ h6 {
   width: 33.33%;
 }
 
+@media (max-width: 1170px) {
+  .grid_products > * {
+    width: 50%;
+  }
+}
+
+@media (max-width: 549px) {
+  .grid_products > * {
+    width: 100%;
+  }
+}
+
+@media (max-width: 991px) {
+  .layout_products > :nth-child(1) {
+    width: 100%;
+  }
+  .layout_products > :nth-child(2) {
+    width: 100%;
+    order: -1;
+  }
+}
+
 .card_product {
   overflow: hidden;
 }
@@ -139,6 +161,7 @@ h6 {
   height: 50px;
   padding: 20px 30px;
   padding-right: 55px;
+  box-shadow: 0px 5px 25px rgba(26, 33, 47, 0.1);
 }
 
 .button_primary::after {
@@ -268,6 +291,7 @@ h6 {
 .contacts > * {
   padding: 0 40px;
   flex-shrink: 0;
+  flex-grow: 1;
 }
 
 .contacts__body {
@@ -310,6 +334,16 @@ h6 {
   opacity: 0.8;
 }
 
+@media (max-width: 639px) {
+  .contacts {
+    flex-direction: column;
+  }
+  .contacts__body,
+  .contacts__end {
+    width: auto;
+  }
+}
+
 .map {
   flex-grow: 1;
 }
@@ -332,4 +366,86 @@ h6 {
   border-top: 1px solid #efefef;
   color: #8f8f8f;
   font-size: 12px;
+}
+
+.product {
+  display: flex;
+  margin: -35px;
+  padding-top: 35px;
+  padding-bottom: 35px;
+}
+
+@media (max-width: 767px) {
+  .product {
+    flex-direction: column;
+  }
+}
+
+.product > * {
+  padding: 35px;
+  flex: 1;
+}
+
+.product__title {
+  margin-top: 0;
+  font-size: 36px;
+}
+
+.product__properties > * + * {
+  margin-top: 16px;
+}
+
+.product__properties > * .product__properties > * {
+  margin-top: 8px;
+}
+
+.product__price,
+.product__actions {
+  margin-top: 16px;
+}
+
+.gallery {
+  display: flex;
+  margin: -15px;
+}
+
+.gallery > * {
+  padding: 15px;
+  display: flex;
+  flex-shrink: 0;
+}
+
+.gallery > :last-child {
+  flex-grow: 1;
+}
+
+.gallery__thumbnails {
+  display: flex;
+  flex-direction: column;
+  margin: -15px;
+  flex-grow: 1;
+}
+
+.gallery__thumbnail {
+  width: 70px;
+  height: 110px;
+  border-radius: 4px;
+  object-fit: cover;
+  margin: 15px;
+  flex-grow: 1;
+}
+
+.gallery__image {
+  object-fit: cover;
+  border-radius: 4px;
+  flex-grow: 1;
+}
+
+@media (max-width: 639px) {
+  .gallery {
+    flex-direction: column-reverse;
+  }
+  .gallery__thumbnails {
+    flex-direction: row;
+  }
 }

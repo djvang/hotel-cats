@@ -42,6 +42,7 @@ a {
 
 .layout {
   display: flex;
+  flex-wrap: wrap;
   margin: -45px;
 }
 
